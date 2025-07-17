@@ -3,9 +3,11 @@ let app = express();
 
 const PORT = process.env.PORT || 3030;
 
-function(req, res) {
+app.get(req, res) {
+  console.log('Hello World');
   res.send('Hello Express');
 }
+
 
 
 
