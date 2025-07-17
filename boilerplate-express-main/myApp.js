@@ -3,14 +3,18 @@ let app = express();
 
 const PORT = process.env.PORT || 3030;
 
-app.get("/", function(req, res) {
-  res.send("Hello World");
+app.get('/', (req, res) => {
+  res.send(`
+    <html>
+      <body>
+        <script>
+          console.log("Hello World");
+        </script>
+        <h1>Check the browser console</h1>
+      </body>
+    </html>
+  `);
 });
-app.listen(PORT,()=>{
-console.log('Hello World');
-}):
-
-
 
 
 
