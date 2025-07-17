@@ -16,7 +16,7 @@
     "url": "https://github.com/freeCodeCamp/boilerplate-npm/issues"
   },
   "homepage": "https://github.com/freeCodeCamp/boilerplate-npm#readme",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "keywords": [ "Backend", "API", "freecodecamp" ],
   "author": "David Ng'ang'a Irungu",
   "license": "MIT"
