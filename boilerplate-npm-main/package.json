@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/freeCodeCamp/boilerplate-npm#readme",
   "version": "1.0.0",
-  "keywords": [],
+  "keywords": [ "descriptive", "related", "words" ],
   "author": "David Ng'ang'a Irungu",
   "license": "ISC"
 }
