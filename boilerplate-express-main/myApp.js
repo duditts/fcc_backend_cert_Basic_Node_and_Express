@@ -12,6 +12,9 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
   
 });
+app.get('/json', function(req, res) {
+  res.json({ message: "Hello JSON" });
+});
 //app.use(express.static(path.join)(__dirname, 'public','style.css'));
 
 
