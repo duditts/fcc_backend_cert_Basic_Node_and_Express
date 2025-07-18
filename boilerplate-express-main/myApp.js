@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   
 });
 app.get('/json', function(req, res) {
-  res.json({ message: "Hello JSON" });
+  res.json({ message: "Hello json" });
 });
 //app.use(express.static(path.join)(__dirname, 'public','style.css'));
 
