@@ -13,13 +13,23 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
   
 });
-app.get('/json', function(req, res) {
-  let message = "Hello json";
+// app.get('/json', function(req, res) {
+//   let message = "Hello json";
+//   if (process.env.MESSAGE_STYLE === "uppercase") {
+//     message = message.toUpperCase();
+//       }
+//   res.json({ message: message });
+// });
+
+app.get("/json", (req, res) => {
+  const message = "Hello json";
   if (process.env.MESSAGE_STYLE === "uppercase") {
-    message = message.toUpperCase();
-      }
-  res.json({ message: message });
+    res.json({ message: message.toUpperCase() });
+  } else {
+    res.json({ message });
+  }
 });
+
 //app.use(express.static(path.join)(__dirname, 'public','style.css'));
 
 
