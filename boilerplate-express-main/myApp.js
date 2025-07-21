@@ -10,7 +10,7 @@ app.get('/', (req ,res) => {
     res.send("Hello Express");
 });
 
-app.use(req ,res) =>{
+app.get(req ,res) =>{
    res.sendFile(absolutePath);
 });
 
