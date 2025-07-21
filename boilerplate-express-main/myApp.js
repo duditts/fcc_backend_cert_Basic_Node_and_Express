@@ -18,6 +18,9 @@ app.use((req, res, next) => {
   console.log(method+" "+path+" - "+ip);
   next();
 });
+app.get('/:name/echo', (req, res) => {
+  res.json({echo: req.params.name});
+});
 app.get('/now',(req, res, next) =>{
   req.time = new Date().toString();
   next();
