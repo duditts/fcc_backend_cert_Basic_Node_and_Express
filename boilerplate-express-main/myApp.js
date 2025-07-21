@@ -1,7 +1,6 @@
 require('dotenv').config();
 let express = require('express');
 let app = express();
-let path = require('path');
 let absolutePath = path.resolve(__dirname, 'views/index.html');
 
 console.log("hello World");
@@ -10,9 +9,9 @@ console.log("hello World");
 //    res.send("Hello Express");
 //});
 
-app.use(req ,res =>{
-    res.sendFile(absolutePath);
-});
+//app.use(req ,res =>{
+//    res.sendFile(absolutePath);
+//});
 
 
 
