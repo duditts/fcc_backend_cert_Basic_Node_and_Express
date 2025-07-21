@@ -13,10 +13,9 @@ app.use('/public', express.static(__dirname + '/public'));
 //     ? "HELLO JSON" 
 //     : "Hello json"});
 // });
-app.get('/json',(req, res, next) =>{
-  let {method,path,ip} = req;
-  res.json({"message":(`${method} ${path} - IP: ${ip}`)});
-  next();
+app.use((req, res, next) => {
+  let {method, path, ip} = req;
+  res.json({"message":(`${method} ${path} -: ${ip}`)
 });
 app.get('/',(req ,res) =>{
   res.sendFile(absolutePath);
