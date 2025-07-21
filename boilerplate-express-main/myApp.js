@@ -6,13 +6,13 @@ let absolutePath = path.resolve(__dirname, 'views/index.html');
 
 console.log("hello World");
 
-app.get('/', req ,res => {
+app.get('/', (req ,res) => {
     res.send("Hello Express");
 });
 
-//app.use(req ,res =>{
-//    res.sendFile(absolutePath);
-//});
+app.use(req ,res) =>{
+   res.sendFile(absolutePath);
+});
 
 
 
