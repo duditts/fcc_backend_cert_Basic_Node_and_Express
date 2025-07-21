@@ -3,9 +3,8 @@ let express = require('express');
 let app = express();
 let path = require('path');
 let absolutePath = path.resolve(__dirname, 'views/index.html');
-app.use(express.static(__dirname + "/public"))
-
-
+//app.use(express.static(__dirname + "/public"))
+app.use('/public', express.static(__dirname + '/public'));
 //app.get('/', (req ,res) => {
 //    res.send("Hello Express");
 //});
