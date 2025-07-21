@@ -10,9 +10,9 @@ app.get('/', (req ,res) => {
     res.send("Hello Express");
 });
 
-app.get(req ,res) =>{
-   res.sendFile(absolutePath);
-});
+//app.get(req ,res) =>{
+ //  res.sendFile(absolutePath);
+//});
 
 
 
