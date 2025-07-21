@@ -8,12 +8,16 @@ app.use('/public', express.static(__dirname + '/public'));
 //app.get('/', (req ,res) => {
 //    res.send("Hello Express");
 //});
-app.get('/json', (req ,res) => {
-  res.json({"message": process.env.MESSAGE_STYLE == 'uppercase' 
-    ? "HELLO JSON" 
-    : "Hello json"});
+// app.get('/json', (req ,res) => {
+//   res.json({"message": process.env.MESSAGE_STYLE == 'uppercase' 
+//     ? "HELLO JSON" 
+//     : "Hello json"});
+// });
+app.get('/json',(req, res, next) =>{
+  let {method,path,ip} = req;
+  res.json({"message":(`${method} ${path} - IP: ${ip}`)});
+  next();
 });
-
 app.get('/',(req ,res) =>{
   res.sendFile(absolutePath);
 });
