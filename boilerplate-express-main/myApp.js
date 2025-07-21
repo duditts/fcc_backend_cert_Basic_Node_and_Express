@@ -18,8 +18,11 @@ app.use((req, res, next) => {
   console.log(method+" "+path+" - "+ip);
   next();
 });
-app.get('/:name/echo', (req, res) => {
-  res.json({echo: req.params.name});
+app.get('/:word/echo', (req, res) => {
+  res.json({echo: req.params.word});
+});
+app.get('/name', (req, res) => {
+  res.json({name: req.query.first + " " + req.query.last});
 });
 app.get('/now',(req, res, next) =>{
   req.time = new Date().toString();
