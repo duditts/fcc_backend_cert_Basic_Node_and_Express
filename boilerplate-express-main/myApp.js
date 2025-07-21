@@ -15,7 +15,7 @@ app.use('/public', express.static(__dirname + '/public'));
 // });
 app.use((req, res, next) => {
   let {method, path, ip} = req;
-  console.log(method+" "+path+"-"+ip);
+  console.log(method+" "+path+" - "+ip);
   next();
 });
 app.get('/',(req ,res) =>{
